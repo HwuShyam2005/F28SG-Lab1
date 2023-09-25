@@ -7,7 +7,16 @@ public class Reverse {
 	//
 	// O(?)
 	public static void reverse(String[] arr){ 
+		Stack st= new Stack(arr.length);
+		for(int i=0; i<arr.length; i++) {
+			st.push(arr[i]);
+		}
+		for(int i=0; i< arr.length; i++) {
+			arr[i]= (String) st.pop();
+		}
 
 	}
-	
+
 }
+	
+

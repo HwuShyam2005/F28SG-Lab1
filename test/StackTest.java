@@ -21,7 +21,7 @@ public class StackTest {
 	@Test
 	public void testPushEmptySize() {
 		// test the size of an empty stack (hint: test st.size() )
-		fail("not implemented yet");
+		assertEquals(0,st.size());
 	}
 	
 	@Test
@@ -29,7 +29,7 @@ public class StackTest {
 		st.push("A");
 		st.push("B");
 		// test the size of a non-empty stack
-		fail("not implemented yet");
+		assertEquals(2,st.size());
 	}
 	
 	@Test
@@ -37,32 +37,34 @@ public class StackTest {
 		st.push("A");
 		st.push("B");
 		// step 1: test what st.pop() returns
-		fail("not implemented yet");
+		assertEquals("B",st.pop());
 		// step 2: test what st.pop() returns
-		fail("not implemented yet");
+		assertEquals("A",st.pop());
 	}
 	
 	@Test
 	public void testTopTwo() {
 		st.push("A");
 		// step 1: test what st.top() returns
-		fail("not implemented yet");
+		assertEquals("A",st.top());
 		// step 2: test what st.top() returns
-		fail("not implemented yet");
+		assertEquals("A",st.top());
 	}
 	
 	
 	@Test(expected = StackException.class)
 	public void testEmptyPop() {
 		// try popping from an empty stack
-		fail("not implemented yet");
+		st.pop();
 	}
 
 	@Test(expected = StackException.class)
 	public void testFullPush() {
 		// try pushing too many elements to the stack
 		// (which has a capacity of 2 elements)
-		fail("not implemented yet");
+		st.push("A");
+		st.push("B");
+		st.push("C");
 	}
 
 }
